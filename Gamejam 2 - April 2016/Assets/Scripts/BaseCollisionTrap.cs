@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BaseCollisionTrap : MonoBehaviour {
 
-	public KeyCode actiaveKey;
+	public KeyCode activateKey;
 
 	private enum ActiveState {  NotActive, Activating, Active, OnCooldown, Dead };
 
@@ -39,7 +39,7 @@ public class BaseCollisionTrap : MonoBehaviour {
 	{
 		activeState = ActiveState.OnCooldown;
 		yield return new WaitForSeconds(cooldown);
-		activeState = ActiveState.Active;
+		activeState = ActiveState.NotActive;
 	}
 
 	IEnumerator DoActivateCoroutine()
@@ -53,7 +53,7 @@ public class BaseCollisionTrap : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if(activeState == ActiveState.NotActive &&  Input.GetKey(actiaveKey))
+		if(activeState == ActiveState.NotActive &&  Input.GetKey(activateKey))
 		{
 			StartCoroutine(DoActivateCoroutine());
 		}

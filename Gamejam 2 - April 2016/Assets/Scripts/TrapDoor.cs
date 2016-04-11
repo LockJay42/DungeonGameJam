@@ -7,8 +7,9 @@ using System.Collections;
 
 		// Use this for initialization
 		[Range(0, 30)]
-		public float Duration;
-	bool isActive;
+		public float maxDuration;
+	float duration;
+		bool isActive;
 
 		void Start()
 		{
@@ -17,6 +18,7 @@ using System.Collections;
 
 		void OnActivate()
 		{
+			duration = maxDuration;
 			//run animation
 			GetComponent<Collider>().enabled = false;
 		}
@@ -32,8 +34,8 @@ using System.Collections;
 		{
 			if(isActive)
 			{
-				Duration -= Time.deltaTime;
-				if(Duration <= 0)
+				duration -= Time.deltaTime;
+				if(duration <= 0)
 				{
 					//run close animation
 					SendMessage("DeactivateTrap");
