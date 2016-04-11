@@ -6,16 +6,18 @@ public class SpikeTrap : MonoBehaviour {
 
 	// Use this for initialization
 	[Range(0, 10)]
-	float duration;
+	public float maxDuration;
+	private float duration;
 
 	bool isActive = false;
 
 	void Start () {
-
+		GetComponent<Collider>().enabled = false;
 	}
 
 	void OnActivate()
 	{
+		duration = maxDuration;
 		isActive = true;
 		//run animation
 		GetComponent<Collider>().enabled = true;
@@ -34,6 +36,8 @@ public class SpikeTrap : MonoBehaviour {
 			if(duration <= 0)
 			{
 				SendMessage("DeactivateTrap");
+				GetComponent<Collider>().enabled = false;
+				isActive = false;
 			}
 		}
 	}
