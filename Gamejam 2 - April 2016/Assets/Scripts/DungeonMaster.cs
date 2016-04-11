@@ -1,24 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-class TrapPlaceholder
-{
-    public void DoTheThing() { }
-}
-
 public class DungeonMaster : MonoBehaviour
 {
-    TrapPlaceholder one;
-    TrapPlaceholder two;
-    TrapPlaceholder three;
-    TrapPlaceholder four;
-
-    
+    public TrapPlaceholder one;
+    public TrapPlaceholder two;
+    public TrapPlaceholder three;
+    public TrapPlaceholder four;
+    public TrapPlaceholder five;
 
     // Use this for initialization
     void Start ()
     {
-        
+            
 	}
 	
 	// Update is called once per frame
@@ -56,6 +50,12 @@ public class DungeonMaster : MonoBehaviour
         if (Input.GetKeyDown("r"))
         {
             four.DoTheThing();
+        }
+
+        //if (Input.GetButton("joystick 1 button 4"))
+        if (Input.GetKeyDown("space"))
+        {
+            five.DoTheThing();
         }
     }
 
