@@ -13,7 +13,7 @@ public class CameraScreenGrab : MonoBehaviour {
 	Texture2D tex;
 	
 	void Start () {
-		camera.pixelRect = new Rect(0,0,Screen.width/pixelSize,Screen.height/pixelSize);
+		GetComponent<Camera>().pixelRect = new Rect(0,0,Screen.width/pixelSize,Screen.height/pixelSize);
 		for (int i = 0; i < otherCameras.Length; i++)
 			otherCameras[i].pixelRect = new Rect(0,0,Screen.width/pixelSize,Screen.height/pixelSize);
 	}
@@ -56,9 +56,9 @@ public class CameraScreenGrab : MonoBehaviour {
 		
 		DestroyImmediate(tex);
 
-		tex = new Texture2D(Mathf.FloorToInt(camera.pixelWidth), Mathf.FloorToInt(camera.pixelHeight));
+		tex = new Texture2D(Mathf.FloorToInt(GetComponent<Camera>().pixelWidth), Mathf.FloorToInt(GetComponent<Camera>().pixelHeight));
 		tex.filterMode = filterMode;
-		tex.ReadPixels(new Rect(0, 0, camera.pixelWidth, camera.pixelHeight), 0, 0);
+		tex.ReadPixels(new Rect(0, 0, GetComponent<Camera>().pixelWidth, GetComponent<Camera>().pixelHeight), 0, 0);
 		tex.Apply();
 	}
 
