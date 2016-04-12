@@ -29,29 +29,17 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector3(0, rb.velocity.y, 0);
         movement.Set(0, 0, 0);
 
-        //get controller for InControl input
-        //InputDevice device = InputManager.ActiveDevice;
-
         //get analog stick input
         float x = Input.GetAxis("Horizontal");
 
-        //If you want to use InControl input this is how I did movement, just need to make x equal zero every frame
-        //level is backwards so x axis is reverse
-        //move right
-        //if (device.Direction.Left == true)
-        //  x = -movementDistance;
-        ////move left
-        //if (device.Direction.Right == true)
-        //  x = movementDistance;
-
         //if inputting A then jump
-        //For InControl input use device.Action1.IsPressed
-        if (Input.GetButton("Fire1") && grounded)
+        if (Input.GetButton("Button A") && grounded)
         {
             rb.velocity += new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
             grounded = false;
         }
 
+        //if not on the ground
         if (!grounded)
         {
             //increase gravity if falling
@@ -74,6 +62,7 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionExit()
     {
         //Increase gravity when falling
+        grounded = false;
         Vector3 extraGravityForce = (Physics.gravity * gravityMultiplier) - Physics.gravity;
         rb.AddForce(extraGravityForce);
     }
