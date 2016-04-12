@@ -25,7 +25,8 @@ public class SpikeTrap : MonoBehaviour {
 
 	void OnPlayerCollision()
 	{
-		//todo Kill player
+		GameObject.FindGameObjectWithTag("player").GetComponent<PlayerScript>().lives -= 1;
+		LevelManager.LoadPlayableLevelRandomly();
 	}
 
 	// Update is called once per frame
