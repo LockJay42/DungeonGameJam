@@ -7,9 +7,6 @@ public class Chandelier : MonoBehaviour
 {
 
 	// Use this for initialization
-	[Range(-10, 0)]
-	public float MaxSpeed;
-	Vector3 speed;
 	bool active = false;
 
 	[Range(0, 20)]
@@ -17,7 +14,6 @@ public class Chandelier : MonoBehaviour
 
 	void Start()
 	{
-		speed = new Vector3(0, 0, 0);
 		GetComponent<Rigidbody>().useGravity = false;
 	}
 
@@ -28,7 +24,8 @@ public class Chandelier : MonoBehaviour
 
 	void OnPlayerCollision()
 	{
-		//todo Kill player
+		GameObject.FindGameObjectWithTag("player").GetComponent<PlayerScript>().lives -= 1;
+		LevelManager.LoadPlayableLevelRandomly();
 	}
 
 	// Update is called once per frame

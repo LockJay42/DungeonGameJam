@@ -11,7 +11,7 @@ public class LoadRandomLevel : MonoBehaviour {
 
 	public void loadRandomLevel()
 	{
-		SceneManager.LoadScene(Random.Range(2,SceneManager.sceneCount));
+		LevelManager.LoadPlayableLevelRandomly();
 	}
 	
 	// Update is called once per frame
