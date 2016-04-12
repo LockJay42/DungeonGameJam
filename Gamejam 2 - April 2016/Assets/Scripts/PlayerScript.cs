@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
 
     public Rigidbody rb;
     public int lives;
+    public int score;
 
     // Use this for initialization
     void Start()
