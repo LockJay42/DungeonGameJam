@@ -3,7 +3,7 @@ using System.Collections;
 
 
 //Attach this to a camera
-public class CameraScreenGrab : MonoBehaviour {
+public class PixelatedEffect : MonoBehaviour {
 		
 	//how chunky to make the screen
 	public int pixelSize = 4;
