@@ -40,6 +40,7 @@ public class ExplosiveTrap : MonoBehaviour {
 
     void OnPlayerCollision()
     {
-        //todo kill player
-    }
+		GameObject.FindGameObjectWithTag("player").GetComponent<PlayerScript>().lives -= 1;
+		LevelManager.LoadPlayableLevelRandomly();
+	}
 }
