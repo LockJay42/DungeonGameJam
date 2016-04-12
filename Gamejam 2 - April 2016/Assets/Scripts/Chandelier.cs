@@ -10,15 +10,20 @@ public class Chandelier : MonoBehaviour
 	[Range(-10, 0)]
 	public float MaxSpeed;
 	Vector3 speed;
+	bool active = false;
+
+	[Range(0, 20)]
+	public float timeToMaxAcceleration;
 
 	void Start()
 	{
 		speed = new Vector3(0, 0, 0);
+		GetComponent<Rigidbody>().useGravity = false;
 	}
 
 	void OnActivate()
 	{
-		speed = new Vector3(0, MaxSpeed, 0);
+		active = true;
 	}
 
 	void OnPlayerCollision()
@@ -29,6 +34,9 @@ public class Chandelier : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		transform.position += speed;
+		if (active)
+		{
+			GetComponent<Rigidbody>().useGravity = true;
+		}
 	}
 }
