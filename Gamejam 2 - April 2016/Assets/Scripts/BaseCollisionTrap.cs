@@ -3,22 +3,47 @@ using System.Collections;
 
 public class BaseCollisionTrap : MonoBehaviour {
 
-	public KeyCode activateKey;
+	public enum TrapKey { Z,X,C,V };
+
+	public TrapKey trapKey;
+
+	private KeyCode activateKey;
 
 	private enum ActiveState {  NotActive, Activating, Active, OnCooldown, Dead };
 
 	private ActiveState activeState;
 
 
+	private KeyCode GetKeyCode(TrapKey key)
+	{
+		if (key == TrapKey.Z) {
+			return KeyCode.Z;
+		}
+		if (key == TrapKey.X)
+		{
+			return KeyCode.X;
+		}
+		if (key == TrapKey.C)
+		{
+			return KeyCode.C;
+		}
+		if (key == TrapKey.V)
+		{
+			return KeyCode.V;
+		}
+
+		return KeyCode.None;
+	}
 
 	[Range(0, 1)]
 	public float delay;
 	// Use this for initialization
 
 	[Range(0, 20)]
-	public int cooldown;
+	public float cooldown;
 
 	void Start () {
+		activateKey = GetKeyCode(trapKey);
 		activeState = ActiveState.NotActive;
 	}
 
