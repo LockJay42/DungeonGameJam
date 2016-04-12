@@ -6,6 +6,6 @@ public class LevelManager{
 
 	public static void LoadPlayableLevelRandomly()
 	{
-		SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCount));
+		SceneManager.LoadScene(Random.Range(1, SceneManager.sceneCount));
 	}
 }
