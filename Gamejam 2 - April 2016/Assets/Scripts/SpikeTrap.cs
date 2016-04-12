@@ -8,15 +8,18 @@ public class SpikeTrap : MonoBehaviour {
 	[Range(0, 10)]
 	public float maxDuration;
 	private float duration;
+	private Animator anim;
 
 	bool isActive = false;
 
 	void Start () {
+		anim = transform.GetComponent<Animator>();
 		GetComponent<Collider>().enabled = false;
 	}
 
 	void OnActivate()
 	{
+		anim.SetBool("AnimateSpikes", true);
 		duration = maxDuration;
 		isActive = true;
 		//run animation
@@ -35,6 +38,7 @@ public class SpikeTrap : MonoBehaviour {
 			duration -= Time.deltaTime;
 			if(duration <= 0)
 			{
+				anim.SetBool("AnimateSpikes", false);
 				SendMessage("DeactivateTrap");
 				GetComponent<Collider>().enabled = false;
 				isActive = false;

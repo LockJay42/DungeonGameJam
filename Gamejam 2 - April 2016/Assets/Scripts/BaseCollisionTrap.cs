@@ -54,8 +54,7 @@ public class BaseCollisionTrap : MonoBehaviour {
 		{
 			if (activeState == ActiveState.Active)
 			{
-				SendMessage("OnPlayerCollision");
-
+				//SendMessage("OnPlayerCollision");
                 //todo add points to dungeon master
 			}
 		}
@@ -65,13 +64,16 @@ public class BaseCollisionTrap : MonoBehaviour {
 
 	IEnumerator DeactivateTrap()
 	{
+		Debug.Log("Deactivating");
 		activeState = ActiveState.OnCooldown;
 		foreach (var particleSystem in ActiveTrapParticleSystem)
 		{
 			particleSystem.Stop();
+			particleSystem.gameObject.SetActive(false);
 		}
 		yield return new WaitForSeconds(cooldown);
 		activeState = ActiveState.NotActive;
+		Debug.Log("readytouse");
 	}
 
 	IEnumerator DoActivateCoroutine()
@@ -81,7 +83,9 @@ public class BaseCollisionTrap : MonoBehaviour {
 		activeState = ActiveState.Active;
 		foreach(var particleSystem in ActiveTrapParticleSystem)
 		{
+			particleSystem.gameObject.SetActive(true);
 			particleSystem.Play();
+			Debug.Log("particles on");
 		}
 		SendMessage("OnActivate");
 	}
