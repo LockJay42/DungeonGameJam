@@ -7,12 +7,13 @@ public class PlayerScript : MonoBehaviour
     public Vector3 movement = new Vector3(0, 0, 0);
     public float movementSpeed = 12f;
     public float jumpHeight = 10f;
-    public float gravityMultiplier = 2;
+    public float gravityMultiplier = 1;
     public float movementDistance = 10;
     public bool grounded = true;
+    public int score;
 
     public Rigidbody rb;
-    public int lives;
+    public int lives = 3;
 
     // Use this for initialization
     void Start()
