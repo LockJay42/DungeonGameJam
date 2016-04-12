@@ -10,7 +10,6 @@ public class PlayerScript : MonoBehaviour
     public float gravityMultiplier = 2;
     public float movementDistance = 10;
     public bool grounded = true;
-    public int score;
 
     public Rigidbody rb;
     public int lives;
