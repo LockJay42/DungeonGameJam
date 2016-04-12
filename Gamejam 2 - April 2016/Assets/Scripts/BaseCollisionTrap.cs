@@ -13,6 +13,7 @@ public class BaseCollisionTrap : MonoBehaviour {
 
 	private ActiveState activeState;
 
+	public ParticleSystem[] ActiveTrapParticleSystem;
 
 	private KeyCode GetKeyCode(TrapKey key)
 	{
@@ -65,6 +66,10 @@ public class BaseCollisionTrap : MonoBehaviour {
 	IEnumerator DeactivateTrap()
 	{
 		activeState = ActiveState.OnCooldown;
+		foreach (var particleSystem in ActiveTrapParticleSystem)
+		{
+			particleSystem.Stop();
+		}
 		yield return new WaitForSeconds(cooldown);
 		activeState = ActiveState.NotActive;
 	}
@@ -74,6 +79,10 @@ public class BaseCollisionTrap : MonoBehaviour {
 		activeState = ActiveState.Activating;
 		yield return new WaitForSeconds(delay);
 		activeState = ActiveState.Active;
+		foreach(var particleSystem in ActiveTrapParticleSystem)
+		{
+			particleSystem.Play();
+		}
 		SendMessage("OnActivate");
 	}
 
