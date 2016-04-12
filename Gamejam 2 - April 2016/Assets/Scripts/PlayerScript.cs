@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour
     public float movementSpeed = 12f;
     public float jumpHeight = 40f;
     public bool grounded = true;
+    public int score;
 
     public Rigidbody rb;
 
