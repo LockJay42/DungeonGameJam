@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cee45f923dc326c4ea411a708b978af0
-timeCreated: 1460356893
+timeCreated: 1460436750
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,10 @@ TextureImporter:
     21300016: UI Elements_8
     21300018: UI Elements_9
     21300020: UI Elements_10
+    21300022: UI Elements_11
+    21300024: UI Elements_12
+    21300026: UI Elements_13
+    21300028: UI Elements_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -69,7 +73,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_1
@@ -80,7 +84,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_2
@@ -91,7 +95,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_3
@@ -102,7 +106,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_4
@@ -113,7 +117,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_5
@@ -124,7 +128,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_6
@@ -135,7 +139,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_7
@@ -146,7 +150,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_8
@@ -157,7 +161,7 @@ TextureImporter:
         width: 6
         height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_9
@@ -168,7 +172,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: UI Elements_10
@@ -178,6 +182,50 @@ TextureImporter:
         y: 38
         width: 11
         height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UI Elements_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UI Elements_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UI Elements_13
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 34
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: UI Elements_14
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 34
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

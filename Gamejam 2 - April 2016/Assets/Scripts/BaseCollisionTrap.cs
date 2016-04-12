@@ -55,6 +55,8 @@ public class BaseCollisionTrap : MonoBehaviour {
 			if (activeState == ActiveState.Active)
 			{
 				SendMessage("OnPlayerCollision");
+
+                //todo add points to dungeon master
 			}
 		}
 		

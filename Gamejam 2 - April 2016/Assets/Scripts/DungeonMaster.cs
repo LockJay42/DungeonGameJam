@@ -15,6 +15,8 @@ public class DungeonMaster : MonoBehaviour
     public Transform playerTwo;
     public Transform playerThree;
 
+    public int score;
+
     float pOneX;
     float pOneY;
 
@@ -48,6 +50,12 @@ public class DungeonMaster : MonoBehaviour
     }
 
 
+    void AddPoint()
+    {
+        score += 8;
+    }
+
+
     void UpdateCamera()
     {
         //find average x value
@@ -58,6 +66,7 @@ public class DungeonMaster : MonoBehaviour
 
         Vector3 newPos = new Vector3(xAv, yAv, cameraMaster.position.z);
         cameraMaster.position = newPos;
+
 
         //change the orthographic size value
 
