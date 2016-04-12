@@ -6,7 +6,7 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: joystick 1 analog 0
+    m_Name: Button A
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
