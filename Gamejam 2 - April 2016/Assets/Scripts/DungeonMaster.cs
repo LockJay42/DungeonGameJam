@@ -48,40 +48,6 @@ public class DungeonMaster : MonoBehaviour
     }
 
 
-    //void ActivateTraps()
-    //{
-    //    //if (Input.GetButton("joystick 1 button 0"))
-    //    if (Input.GetKeyDown("q"))
-    //    {
-    //        one.DoTheThing();
-    //    }
-    //
-    //    //if (Input.GetButton("joystick 1 button 1"))
-    //    if (Input.GetKeyDown("w"))
-    //    {
-    //        two.DoTheThing();
-    //    }
-    //
-    //    //if (Input.GetButton("joystick 1 button 2"))
-    //    if (Input.GetKeyDown("e"))
-    //    {
-    //        three.DoTheThing();
-    //    }
-    //
-    //    //if (Input.GetButton("joystick 1 button 3"))
-    //    if (Input.GetKeyDown("r"))
-    //    {
-    //        four.DoTheThing();
-    //    }
-    //
-    //    //if (Input.GetButton("joystick 1 button 4"))
-    //    if (Input.GetKeyDown("space"))
-    //    {
-    //        five.DoTheThing();
-    //    }
-    //}
-
-
     void UpdateCamera()
     {
         //find average x value
