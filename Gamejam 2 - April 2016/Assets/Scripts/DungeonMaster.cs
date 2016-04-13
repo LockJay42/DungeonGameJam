@@ -38,14 +38,14 @@ public class DungeonMaster : MonoBehaviour
     void Update()
     {
 
-        pOneX = playerOne.position.x;
-        pOneY = playerOne.position.y;
-
-        pTwoX = playerTwo.position.x;
-        pTwoY = playerTwo.position.y;
-
-        pThreeX = playerThree.position.x;
-        pThreeY = playerThree.position.y;
+//        pOneX = playerOne.position.x;
+//        pOneY = playerOne.position.y;
+//
+//        pTwoX = playerTwo.position.x;
+//        pTwoY = playerTwo.position.y;
+//
+//        pThreeX = playerThree.position.x;
+//        pThreeY = playerThree.position.y;
     }
 
 
