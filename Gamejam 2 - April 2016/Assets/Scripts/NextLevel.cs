@@ -3,10 +3,6 @@ using System.Collections;
 
 public class NextLevel : MonoBehaviour {
 
-
-    public Collider endLevel;
-
-
 	// Use this for initialization
 	void Start()
     {	}
@@ -17,8 +13,9 @@ public class NextLevel : MonoBehaviour {
         
 	}
 
-    void OnPlayerCollision()
+    void OnCollisionEnter(Collision other)
     {
-        LevelManager.LoadNextLevel();
+        if (other.gameObject.CompareTag("End"))
+            LevelManager.LoadNextLevel();  
     }
 }
