@@ -50,10 +50,13 @@ public class BaseCollisionTrap : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col)
 	{
+
 		if (col.gameObject.CompareTag("Player"))
 		{
+			Debug.Log("notBroken");	
 			if (activeState == ActiveState.Active)
 			{
+				Debug.Log("active");
 				SendMessage("OnPlayerCollision");
 
                 //todo add points to dungeon master

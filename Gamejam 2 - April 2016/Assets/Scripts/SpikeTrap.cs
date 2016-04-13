@@ -5,25 +5,28 @@ using System.Collections;
 public class SpikeTrap : MonoBehaviour {
 
 	// Use this for initialization
-	[Range(0, 10)]
-	public float maxDuration;
+	//[Range(0, 10)]
+	private float maxDuration = 2;
 	private float duration;
-	private Animator anim;
+	private Animator[] animators;
 
 	bool isActive = false;
 
 	void Start () {
-		anim = transform.GetComponent<Animator>();
-		GetComponent<Collider>().enabled = false;
+		animators = transform.GetComponentsInChildren<Animator>();
+		//GetComponent<Collider>().enabled = true;
 	}
 
 	void OnActivate()
 	{
-		anim.SetBool("AnimateSpikes", true);
+		foreach (var anim in animators)
+		{
+			anim.SetBool("AnimateSpikes", true);
+		}
 		duration = maxDuration;
 		isActive = true;
 		//run animation
-		GetComponent<Collider>().enabled = true;
+		//GetComponent<Collider>().enabled = true;
 		Debug.Log("colOn");
 	}
 
@@ -37,12 +40,15 @@ public class SpikeTrap : MonoBehaviour {
 	void Update () {
 		if (isActive)
 		{
-			//duration -= Time.deltaTime;
+			duration -= Time.deltaTime;
 			if(duration <= 0)
 			{
-				anim.SetBool("AnimateSpikes", false);
+				foreach (var anim in animators)
+				{
+					anim.SetBool("AnimateSpikes", false);
+				}
 				SendMessage("DeactivateTrap");
-				GetComponent<Collider>().enabled = false;
+				//GetComponent<Collider>().enabled = false;
 				isActive = false;
 			}
 		}
