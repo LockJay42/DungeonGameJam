@@ -24,7 +24,7 @@ public class Chandelier : MonoBehaviour
 
 	void OnPlayerCollision()
 	{
-		GameObject.FindGameObjectWithTag("player").GetComponent<PlayerScript>().lives -= 1;
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>().lives -= 1;
 		LevelManager.LoadPlayableLevelRandomly();
 	}
 
