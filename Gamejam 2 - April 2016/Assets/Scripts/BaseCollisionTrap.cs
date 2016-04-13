@@ -5,6 +5,8 @@ public class BaseCollisionTrap : MonoBehaviour {
 
 	public enum TrapKey { Z,X,C,V };
 
+	public GameObject Button;
+
 	public TrapKey trapKey;
 
 	private KeyCode activateKey;
@@ -95,6 +97,7 @@ public class BaseCollisionTrap : MonoBehaviour {
 		if(activeState == ActiveState.NotActive &&  Input.GetKey(activateKey))
 		{
 			StartCoroutine(DoActivateCoroutine());
+			Destroy(Button); 
 		}
 	}
 }

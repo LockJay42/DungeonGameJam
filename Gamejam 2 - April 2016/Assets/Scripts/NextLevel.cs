@@ -16,6 +16,6 @@ public class NextLevel : MonoBehaviour {
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("End"))
-            LevelManager.LoadNextLevel();  
+            LevelManager.LoadPlayableLevelRandomly();  
     }
 }

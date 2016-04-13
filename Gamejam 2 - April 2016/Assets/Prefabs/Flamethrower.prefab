@@ -171,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163446}
   m_LocalRotation: {x: 0, y: 0.70710665, z: 0, w: 0.70710695}
-  m_LocalPosition: {x: 8.16, y: -6.6, z: -5.693}
+  m_LocalPosition: {x: -6.673339, y: -0.9222939, z: -32.218452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 410542}
@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff7372eba655e34d818a74526403e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button: {fileID: 106914}
   trapKey: 1
   ActiveTrapParticleSystem:
   - {fileID: 19867880}

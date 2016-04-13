@@ -20,6 +20,8 @@ using System.Collections;
 
 		void OnActivate()
 		{
+		GetComponentInChildren<Collider>().enabled = false;
+		Debug.Log ("working");
 		foreach (var anim in animators)
 			{
 				anim.SetBool("TrapActive", true);
@@ -27,7 +29,7 @@ using System.Collections;
 			}
 		duration = maxDuration;
 			//run animation
-			GetComponentInChildren<Collider>().enabled = false;
+
 		}
 
 		void OnPlayerCollision()

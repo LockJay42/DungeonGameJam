@@ -128,22 +128,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &189312
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 463516}
-  - 108: {fileID: 10801772}
-  m_Layer: 0
-  m_Name: Point light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &190624
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,10 +198,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.56, z: -1.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.00033265716, y: -0.00891369, z: -0.062379703}
+  m_LocalScale: {x: 0.13877937, y: 0.03469485, z: 0.034694843}
   m_Children: []
-  m_Father: {fileID: 433800}
+  m_Father: {fileID: 496968}
   m_RootOrder: 0
 --- !u!4 &433800
 Transform:
@@ -228,9 +212,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 11.16}
   m_LocalScale: {x: 4, y: 1, z: 1}
-  m_Children:
-  - {fileID: 432910}
-  - {fileID: 463516}
+  m_Children: []
   m_Father: {fileID: 451736}
   m_RootOrder: 0
 --- !u!4 &451736
@@ -240,7 +222,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8500004, y: -10.812817, z: -12.56}
+  m_LocalPosition: {x: 3.33, y: -5.536, z: -17.254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 433800}
@@ -273,18 +255,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 477052}
-  m_RootOrder: 1
---- !u!4 &463516
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189312}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.56, z: -1.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 433800}
   m_RootOrder: 1
 --- !u!4 &470988
 Transform:
@@ -347,7 +317,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.707107, z: 0, w: 0.70710665}
   m_LocalPosition: {x: -0.716, y: 2.56, z: -0.011}
   m_LocalScale: {x: 22, y: 22, z: 22}
-  m_Children: []
+  m_Children:
+  - {fileID: 432910}
   m_Father: {fileID: 458378}
   m_RootOrder: 2
 --- !u!23 &2360060
@@ -510,39 +481,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!108 &10801772
-Light:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189312}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 10.29
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
 --- !u!108 &10809416
 Light:
   m_ObjectHideFlags: 1
@@ -587,9 +525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff7372eba655e34d818a74526403e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button: {fileID: 105486}
   trapKey: 0
   ActiveTrapParticleSystem: []
-  delay: 0
+  delay: 0.2
   cooldown: 0
 --- !u!114 &11474904
 MonoBehaviour:
@@ -602,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5dc49464f589a458df3abf3378bd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDuration: 3
+  maxDuration: 0
 --- !u!212 &21285060
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -639,7 +578,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: delay
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 190624}
