@@ -8,19 +8,26 @@ using System.Collections;
 		// Use this for initialization
 		[Range(0, 30)]
 		public float maxDuration;
-	float duration;
+		float duration;
 		bool isActive;
+		private Animator[] animators;
 
-		void Start()
+	void Start()
 		{
-			GetComponent<Collider>().enabled = true;
+			animators = transform.GetComponentsInChildren<Animator>();
+			GetComponentInChildren<Collider>().enabled = true;
 		}
 
 		void OnActivate()
 		{
-			duration = maxDuration;
+		foreach (var anim in animators)
+			{
+				anim.SetBool("TrapActive", true);
+			
+			}
+		duration = maxDuration;
 			//run animation
-			GetComponent<Collider>().enabled = false;
+			GetComponentInChildren<Collider>().enabled = false;
 		}
 
 		void OnPlayerCollision()
