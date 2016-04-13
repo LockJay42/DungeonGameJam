@@ -44,7 +44,7 @@ public class FlameTrap : MonoBehaviour {
 		GetComponent<Collider>().enabled = true;
 		active = true;
 		var newSize = boxCollider.size;
-		newSize.y = maxHeight;
+		newSize.z = maxHeight;
 		DOTween.To(GetSize, SetSize, newSize, timeToReachMaxHeight);
 		//transform.DOScaleY(2, 1).SetLoops(1, LoopType.Yoyo).SetRelative();
 
@@ -53,7 +53,7 @@ public class FlameTrap : MonoBehaviour {
 
 	void OnPlayerCollision()
 	{
-		GameObject.FindGameObjectWithTag("player").GetComponent<PlayerScript>().lives -= 1;
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>().lives -= 1;
 		LevelManager.LoadPlayableLevelRandomly();
 	}
 
