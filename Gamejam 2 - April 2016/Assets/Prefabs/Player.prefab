@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.79, y: -9.83, z: -1.12}
+  m_LocalPosition: {x: -20.87, y: -7.76, z: -5.72}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,14 +92,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {x: 0, y: 0, z: 0}
-  movementSpeed: 12
-  jumpHeight: 10
-  gravityMultiplier: 1
+  movementSpeed: 25
+  jumpHeight: 20
+  gravityMultiplier: 4
   movementDistance: 10
   grounded: 1
-  score: 0
   rb: {fileID: 0}
   lives: 3
+  score: 0
 --- !u!136 &13692242
 CapsuleCollider:
   m_ObjectHideFlags: 1

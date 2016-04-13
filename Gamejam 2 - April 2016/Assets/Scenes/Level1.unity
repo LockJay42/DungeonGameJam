@@ -1031,6 +1031,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11484126, guid: c1955852b323098468b27ffbdd3b5e7f, type: 2}
+      propertyPath: movementSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484126, guid: c1955852b323098468b27ffbdd3b5e7f, type: 2}
+      propertyPath: gravityMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484126, guid: c1955852b323098468b27ffbdd3b5e7f, type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484126, guid: c1955852b323098468b27ffbdd3b5e7f, type: 2}
+      propertyPath: jumpHeight
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1955852b323098468b27ffbdd3b5e7f, type: 2}
   m_IsPrefabParent: 0
