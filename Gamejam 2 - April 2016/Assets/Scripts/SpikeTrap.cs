@@ -14,7 +14,7 @@ public class SpikeTrap : MonoBehaviour {
 
 	void Start () {
 		animators = transform.GetComponentsInChildren<Animator>();
-		//GetComponent<Collider>().enabled = true;
+		GetComponentInChildren<Collider>().enabled = true;
 	}
 
 	void OnActivate()
@@ -26,7 +26,7 @@ public class SpikeTrap : MonoBehaviour {
 		duration = maxDuration;
 		isActive = true;
 		//run animation
-		//GetComponent<Collider>().enabled = true;
+		GetComponentInChildren<BoxCollider>().center = new Vector3(0,1,0);
 		Debug.Log("colOn");
 	}
 
